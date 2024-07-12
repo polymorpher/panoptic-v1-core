@@ -89,7 +89,7 @@ contract PanopticFactoryTest is Test {
     ];
 
     // granted token amounts
-    uint256 constant INITIAL_MOCK_TOKENS = type(uint256).max;
+    uint256 constant INITIAL_MOCK_TOKENS = type(uint256).max >> 1;
 
     // store some data about the pool we are testing
     IUniswapV3Pool pool;
