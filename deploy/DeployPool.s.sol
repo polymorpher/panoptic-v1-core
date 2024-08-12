@@ -20,7 +20,7 @@ contract DeployPool is Script {
         console.log("Deploying new Panoptic pool... Token0=%s, token1=%s, fee=%s, salt=%s", TOKEN0_ADDRESS, TOKEN1_ADDRESS);
         console.log("  - fee=%s, salt=%s", FEE, SALT);
         PanopticPool pool = factory.deployNewPool(TOKEN0_ADDRESS, TOKEN1_ADDRESS, FEE, SALT);
-        console.log("Deployed pool to %s", pool);
+        console.log("Deployed pool to %s", address(pool));
 
     }
 }
