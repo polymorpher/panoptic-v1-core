@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "dependencies": {
+    "tsx": "^4.19.1",
+    "viem": "^2.21.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.1.0",
+    "typescript": "^5.5.4"
+  }
+}
