@@ -190,9 +190,9 @@ library PanopticMath {
         //
         //  To solve this, we encode the asset value in tokenId. This parameter specifies which of token0 or token1 is the
         //  asset, such that:
-        //     when asset=0, then amount0 moved at strike K =1.0001**currentTick is 1, amount1 moved to strike K is 1/K
-        //     when asset=1, then amount0 moved at strike K =1.0001**currentTick is K, amount1 moved to strike K is 1
-        //     @polymorpher: note the original text says "when asset=1, then amount1 moved at strike K =1.0001**currentTick is K, amount0 moved to strike K is 1". It is wrong. See getAmountsMoved(...) function to verify
+        //     when asset=0, then amount0 moved at strike K =1.0001**currentTick is 1 for each unit of position*optionRatio, amount1 moved to strike K is K
+        //     when asset=1, then amount0 moved at strike K =1.0001**currentTick is 1/K for each unit of position*optionRatio, amount1 moved to strike K is 1
+        //     @polymorpher: note the original text says " when asset=0, then amount0 moved at strike K =1.0001**currentTick is 1, amount1 moved to strike K is 1/K. when asset=1, then amount1 moved at strike K =1.0001**currentTick is K, amount0 moved to strike K is 1". It is wrong. See getAmountsMoved(...) function to verify
         //
         //  The following function takes this into account when computing the liquidity of the leg and switches between
         //  the definition for getLiquidityForAmount0 or getLiquidityForAmount1 when relevant.
